@@ -48,6 +48,33 @@
     background-color: #000000;
 
         }
+        
+.two-column-container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch; /* Changed from flex-start to stretch */
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+}
+
+.two-column-container .content-section {
+    flex: 1;
+    margin: 0;
+    display: flex; /* Add this */
+    flex-direction: column; /* Add this */
+    justify-content: center; /* Add this to center content vertically */
+}
+
+.two-column-container .image-section {
+    flex: 1;
+}
+
+.two-column-container .image-section img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
 
 /* Add this pseudo-element for opacity */
 body::before {
@@ -57,7 +84,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('thumbnail_image1-2.jpg');
+  //      background-image: url('thumbnail_image1-2.jpg');
     background-repeat: repeat-x;
     background-position: center center;
     background-size: contain;
@@ -75,6 +102,9 @@ body::before {
         transform: translateZ(0);
         will-change: transform;
     }
+    .two-column-container {
+        flex-direction: column;
+    }
     
     body {
         position: relative;
@@ -84,7 +114,7 @@ body::before {
         
         /* Header background for better readability over the rose pattern */
         header {
-            padding: 30px 0;
+padding: 50px 0 0 0;
            // border-bottom: 1px solid #333;
             position: relative;
             background-color: rgba(0,0,0,0.0);
@@ -92,10 +122,12 @@ body::before {
         }
         
         .site-title {
-            font-size: 22px;
+            font-size: 80px;
             margin-bottom: 10px;
             font-weight: normal;
             text-align: center;
+            font-family: 'Raleway', sans-serif;
+            
         }
         
         header > p {
@@ -105,7 +137,7 @@ body::before {
         
         /* Main content */
         main {
-            padding: 40px 0;
+            padding: 0px 0;
         }
         
         .page-title {
@@ -118,7 +150,7 @@ body::before {
         /* Content section background to ensure readability */
 .content-section {
     margin: 0 auto 40px auto;
-    background-color: #1a1219;
+    background-color: #000000; /*#1a1219; */
     opacity: 80%;
     padding: 20px;
     border-radius: 5px;
@@ -234,16 +266,17 @@ img {
 </head>
 <body>
     <header>
-
-        
-        <h1 class="site-title">rosie sycamore</h1>
-        <p></p>
-        
-
+        <img src="title2.png" alt="title">
     </header>
     
     <main>
         <!-- Home Page Content -->
+    <div class="two-column-container">
+              
+               <section class="image-section">
+            <img src="thumbnail_MVM%20cover%20coming%20soon NO BORDER.png" alt="My Violent Muse Artwork">
+        </section>
+       
         <section class="content-section">
             <p>
                 MY VIOLENT MUSE is a psychological thriller about two female vigilantes whose secret pact to kill prominent male art world figures catches up to them when they start receiving anonymous threats, forcing them to question who they can trust, including each other.
@@ -256,14 +289,14 @@ img {
                 
                 <section><img src="logo-small.png" ></section>
                 
-               Rosie Sycamore is an Australian author. When not writing or reading, you'll find her following the sun, trying to befriend every animal in sight, or re-watching her favourite films and TV shows. MY VIOLENT MUSE is her debut novel.
-            </p>
-            <p>
-                
+   
             </p>
         </section>
         
-<section style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+
+    </div>
+      
+      <section style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
    <a href="https://www.barnesandnoble.com/w/my-violent-muse-rosie-sycamore/1149100807?ean=9781538779132" target="_blank">
     <img src="MVM%20pre%20order.png" width=400>
   </a>
@@ -272,9 +305,25 @@ img {
   </a>
 
 </section>
+      
+      
+      
+          <div class="two-column-container">
+              
+               <section class="image-section">
+            <img src="authorpic.png" alt="My Violent Muse Artwork">
+        </section>
+       
+        <section class="content-section">
+            <p>
+            Rosie Sycamore is an Australian author. When not writing or reading, you'll find her following the sun, trying to befriend every animal in sight, or re-watching her favourite films and TV shows. MY VIOLENT MUSE is her debut novel.
+            </p>
+        </section>
         
-         <section><img src="thumbnail_MVM%20cover%20coming%20soon.png"width=1000></section>
-         
+
+    </div>
+
+     
         <section><img src="museAnnouncementArtwork.jpg"     width=1000></section>
 
 
