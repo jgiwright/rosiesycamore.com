@@ -279,6 +279,21 @@ img {
 .image-links a:hover {
     opacity: 0.7;
 }
+
+select {
+  /* Previous properties with background-image */
+  @supports (appearance: base-select) {
+    padding-inline: 10px;
+    background-image: none;
+    &::picker-icon {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-image: url("arrow.svg");
+      transition: rotate 0.2s ease-out;
+    }
+  }
+}
     </style>
 </head>
 <body>
@@ -435,6 +450,14 @@ Compulsive and deviant, <span style="font-style: italic;">My Violent Muse</span>
   
   <input type="text" name="name" required placeholder="name">
   <input type="email" name="email" required placeholder="email">
+  <select name="options" required id="options">
+  <option disabled selected value="">Select an option</option>
+  <option value="event">event</option>
+  <option value="collaboration">collaboration</option>
+  <option value="blurb">blurb request</option>
+  <option value="interview">press/interview request</option>
+  <option value="other">other</option>
+</select>
   <textarea name="message" required placeholder="message"></textarea>
   <button type="submit">send</button>
 </form>
