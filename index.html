@@ -281,18 +281,18 @@ img {
 }
 
 select {
-  /* Previous properties with background-image */
-  @supports (appearance: base-select) {
-    padding-inline: 10px;
-    background-image: none;
-    &::picker-icon {
-      content: "";
-      width: 20px;
-      height: 20px;
-      background-image: url("arrow.svg");
-      transition: rotate 0.2s ease-out;
-    }
-  }
+  width: 100%; 
+  box-sizing: border-box; /* Ensures padding doesn't push it outside the box */
+    background-color: #34495e;
+  color: #ffffff;
+  padding: 8px;
+  border: 1px solid #2c3e50;
+  border-radius: 4px;
+}
+
+select option {
+  background-color: #ffffff;
+  color: #333333;
 }
     </style>
 </head>
@@ -450,14 +450,21 @@ Compulsive and deviant, <span style="font-style: italic;">My Violent Muse</span>
   
   <input type="text" name="name" required placeholder="name">
   <input type="email" name="email" required placeholder="email">
-  <select name="options" required id="options">
-  <option disabled selected value="">Select an option</option>
-  <option value="event">event</option>
-  <option value="collaboration">collaboration</option>
-  <option value="blurb">blurb request</option>
-  <option value="interview">press/interview request</option>
-  <option value="other">other</option>
-</select>
+  
+  
+  
+<div class="custom-dropdown">
+  <select>
+    <option value="" disabled selected>Choose an option</option>
+    <option value="1">event</option>
+    <option value="2">collaboration</option>
+    <option value="3">blurb request</option>
+	<option value="3">press/interview request</option>
+	<option value="3">other</option>
+  </select>
+</div>
+
+
   <textarea name="message" required placeholder="message"></textarea>
   <button type="submit">send</button>
 </form>
