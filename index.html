@@ -283,17 +283,27 @@ img {
 select {
   width: 100%; 
   box-sizing: border-box; /* Ensures padding doesn't push it outside the box */
-    background-color: #34495e;
-  color: #ffffff;
+    background-color: #2d2d2d;
+  color: #999999;
   padding: 8px;
   border: 1px solid #2c3e50;
   border-radius: 4px;
 }
 
 select option {
-  background-color: #ffffff;
+  background-color: #000000;
   color: #333333;
 }
+
+::selection {
+  background-color: #660033; /* Custom highlight background */
+}
+
+::placeholder {
+  color: #999999; /* Changes placeholder text color */
+  opacity: 1;    /* Ensures Firefox applies the full color opacity */
+}
+
     </style>
 </head>
 <body>
@@ -379,6 +389,15 @@ Compulsive and deviant, <span style="font-style: italic;">My Violent Muse</span>
     <span style="color:white;"> – Publishers Weekly</span> 
  </p>
  
+  <p style="font-size: 16px; color:#E2A9F1;">
+ “ What if your rich benefactor was your toxic situationship, your savior, your partner in crime, your blackmailer, your fake sister, obsessively codependent but also had an avoidant attachment style?? A great story for bisexuals with mommy *and* daddy issues that want to unpack the ethically dubious balance between eating with the rich in order to eat the rich.“<br>
+    <span style="color:white;"> – Under the Umbrella Bookstore, Salt Lake City, Utah</span> 
+ </p>
+ 
+ 
+ 
+
+ 
  
 
  </p>
@@ -444,28 +463,67 @@ Compulsive and deviant, <span style="font-style: italic;">My Violent Muse</span>
 			
 					<br>
 			<br>
-			<span style="color:#E2A9F1;">send me a message: </span>
-			<form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="d1784375-6370-406a-a4d3-6a550a7e24a5">
+			<span style="color:#E2A9F1;">contact Rosie directly: </span>
+			
+			<p style="color:#E2A9F1;">
+			
+			<p><b>For blurb requests, </b> please note that Rosie does not blurb books that have used AI in any stage of the writing/publishing process.</p>
+			
+			<p><b>For media requests, </b> please note that Rosie will not agree to any media that uses GenAI and does not give permission to use AI for her likeness in promo or other materials. </p>
+			
+			 </p>
+			
+			
+		<!--	<form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="d1784375-6370-406a-a4d3-6a550a7e24a5" >
   
-  <input type="text" name="name" required placeholder="name">
-  <input type="email" name="email" required placeholder="email">
+  <input type="text" name="name" required placeholder="name" style="background-color: #000000">
+  <input type="email" name="email" required placeholder="email" style="background-color: #000000">
   
   
-  <select name="select" type="select">
-    <option value="" disabled selected>Choose an option</option>
-    <option value="1">event</option>
-    <option value="2">collaboration</option>
-    <option value="3">blurb request</option>
-	<option value="3">press/interview request</option>
-	<option value="3">other</option>
+  <select name="select" type="select" style="background-color: #000000;">
+    <option value="" disabled selected>reason for contact</option>
+    <option value="event">event</option>
+    <option value="collaboration">collaboration</option>
+    <option value="blurb">blurb request</option>
+	<option value="interview">press/interview request</option>
+	<option value="other">other</option>
   </select>
 
 
-  <textarea name="message" required placeholder="message"></textarea>
-  <button type="submit">send</button>
-</form>
+  <textarea name="message" required placeholder="message" style="background-color: #000000"></textarea>
+  <button type="submit" style="background-color: #440022; color:#ffffff">send</button>
+</form> -->
 			
+					
+<form method="POST" id="form">
+
+    <input type="hidden" name="access_key" value="d1784375-6370-406a-a4d3-6a550a7e24a5">
+    <input type="hidden" name="subject" value="New Submission from Web3Forms">
+    <input type="checkbox" name="botcheck" id="" style="display: none;">
+
+    <!-- Custom Form Data -->
+  <input type="text" name="name" required placeholder="name" style="background-color: #000000">
+  <input type="email" name="email" required placeholder="email" style="background-color: #000000">
+   
+   
+  <select name="select" type="select" style="background-color: #000000;">
+    <option value="" disabled selected>reason for contact</option>
+    <option value="event">event</option>
+    <option value="collaboration">collaboration</option>
+    <option value="blurb">blurb request</option>
+	<option value="interview">press/interview request</option>
+	<option value="other">other</option>
+  </select>
+
+
+  <textarea name="message" required placeholder="message" style="background-color: #000000"></textarea>
+
+    <button type="submit" style="background-color: #440022; color:#ffffff">send</button>
+
+    <div id="result"></div>
+
+</form>
 			
         </section>
 		
@@ -483,5 +541,55 @@ Compulsive and deviant, <span style="font-style: italic;">My Violent Muse</span>
         </div>
         <p>&copy; 2026 rosie sycamore. All rights reserved.</p>
     </footer>
+	
+	
+	
+	<div align=center style="display:none;"><a href='https://www.counter12.com'><img src='https://www.counter12.com/img-4yD15Wy1c6DZ86CZ-3.gif' border='0' alt='counter'></a><script type='text/javascript' src='https://www.counter12.com/ad.js?id=4yD15Wy1c6DZ86CZ'></script></div>
+	
+	
+	
+	<script>
+	const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait..."
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = json.message;
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
+});
+	</script>
+	
+	
+	
 </body>
 </html>
