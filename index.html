@@ -1,574 +1,620 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-   
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-964179LHZV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-964179LHZV"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-  gtag('config', 'G-964179LHZV');
-</script>
+            gtag("config", "G-964179LHZV");
+        </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rosie sycamore</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>rosie sycamore</title>
 
-   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Forum&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Forum&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+        <style>
+
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                       font-size: 18px;
+                       // font-family: 'Raleway', sans-serif;
+            		   font-family: 'Forum';
+                    }
+
+                    body {
+
+                        color: white;
+                        line-height: 1.6;
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 0 20px;
+                        text-align: center;
 
 
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+                background-color: #000000;
 
-    
-    <style>
-       
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-           font-size: 18px;
-           // font-family: 'Raleway', sans-serif;
-		   font-family: 'Forum';
-        }
-        
-        body {
-           
-            color: white;
-            line-height: 1.6;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            text-align: center;
+                    }
 
-
-    background-color: #000000;
-
-        }
-        
-.two-column-container {
-    display: flex;
-    gap: 20px;
-    align-items: stretch; /* Changed from flex-start to stretch */
-    max-width: 1000px;
-    margin: 0 auto 40px auto;
-}
-
-.two-column-container .content-section {
-    flex: 1;
-    margin: 0;
-    display: flex; /* Add this */
-    flex-direction: column; /* Add this */
-    justify-content: center; /* Add this to center content vertically */
-    font-size: 14px;
-}
-
-.two-column-container .image-section {
-    flex: 1;
-}
-
-.two-column-container .image-section img {
-    width: 100%;
-    height: auto;
-    margin: 0;
-}
-
-
-/* Add this pseudo-element for opacity */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  //      background-image: url('thumbnail_image1-2.jpg');
-    background-repeat: repeat-x;
-    background-position: center center;
-    background-size: contain;
-    opacity: 1.0;
-    z-index: -1;
-}
-
-@media (max-width: 768px) {
-    body::before {
-        position: absolute;
-        height: 120vh; /* Much taller for vertical repeat */
-        background-attachment: scroll;
-        background-repeat: repeat; /* Allow vertical repeat */
-        background-position: center top;
-        transform: translateZ(0);
-        will-change: transform;
-    }
-    .two-column-container {
-        flex-direction: column;
-    }
-    
-    body {
-        position: relative;
-        min-height: 100vh;
-    }
-}
-        
-       
-        header {
-padding: 50px 0 0 0;
-           // border-bottom: 1px solid #333;
-            position: relative;
-            background-color: rgba(0,0,0,0.0);
-            //border-radius: 5px;
-        }
-        
-        .site-title {
-            font-size: 80px;
-            margin-bottom: 10px;
-            font-weight: normal;
-            text-align: center;
-            font-family: 'Raleway', sans-serif;
-            
-        }
-        
-        header > p {
-            text-align: center;
-        }
-        
-        
-        /* Main content */
-        main {
-            padding: 0px 0;
-        }
-        
-        .page-title {
-            font-size: 28px;
-            margin-bottom: 30px;
-            font-weight: normal;
-            text-align: center;
-        }
-        
-       
-.content-section {
-    margin: 0 auto 40px auto;
-    background-color: #000000; /*#1a1219; */
-    opacity: 80%;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    max-width: 1000px;
-    
-}
-        
-        .section-title {
-            font-size: 24px;
-            margin-bottom: 20px;
-            font-weight: normal;
-            text-align: center;
-        }
-        
-        p {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        
-       
-img {
-    display: block;
-    margin: 0 auto 40px auto;
-    max-width: 100%;
-    height: auto;
-}
-        
-   
-        
-  
-        /* Contact form */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 5px;
-            text-align: center;
-        }
-        
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #444;
-            background-color: #222;
-            color: white;
-            font-size: 16px;
-            font-family: 'Helvetica', sans-serif;
-        }
-        
-        textarea {
-            min-height: 150px;
-        }
-        
-        button {
-            background-color: white;
-            color: black;
-            border: none;
-            padding: 12px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            display: block;
-            margin: 0 auto;
-        }
-        
-        button:hover {
-            background-color: #ddd;
-        }
-        
-        /* Footer */
-        /* Footer background for better readability */
-        footer {
-            padding: 30px 0;
-            margin: 0 auto 40px auto;
-            border-top: 1px solid #333;
-            text-align: center;
-            font-size: 14px;
-            color: #aaa;
-            background-color: rgba(0,0,0,0.8);
-            border-radius: 5px;
-            max-width: 1000px;
-        }
-        
-        .social-links {
-            margin-bottom: 20px;
-        }
-        
-        .social-links a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-        }
-        
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .book-list {
-                grid-template-columns: 1fr;
+            .two-column-container {
+                display: flex;
+                gap: 20px;
+                align-items: stretch;
+                max-width: 1000px;
+                margin: 0 auto 40px auto;
             }
-            
-            .menu-toggle {
-                top: 20px;
+
+            .two-column-container .content-section {
+                flex: 1;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 14px;
             }
-        }
-        
-                    .image-links a {
-    position: relative;
-    display: inline-block;
-    transition: opacity 0.3s ease;
-}
 
-.image-links a:hover {
-    opacity: 0.7;
-}
+            .two-column-container .image-section {
+                flex: 1;
+            }
 
-select {
-  width: 100%; 
-  box-sizing: border-box; /* Ensures padding doesn't push it outside the box */
-    background-color: #2d2d2d;
-  color: #999999;
-  padding: 8px;
-  border: 1px solid #2c3e50;
-  border-radius: 4px;
-}
-
-select option {
-  background-color: #000000;
-  color: #333333;
-}
-
-::selection {
-  background-color: #660033; /* Custom highlight background */
-}
-
-::placeholder {
-  color: #999999; /* Changes placeholder text color */
-  opacity: 1;    /* Ensures Firefox applies the full color opacity */
-}
-
-    </style>
-</head>
-<body>
-    <header>
-        <img src="title2.png" alt="title">
-    </header>
-    
-    <main>
-        <!-- Home Page Content -->
-    <div class="two-column-container">
-              
-               <section class="image-section">
-            <img style=" box-shadow: 0 0 12px rgba(38, 89, 56, 0.6);" src="MVMcoverfigThin.png" alt="My Violent Muse Artwork">
-        </section>
-       
-        <section class="content-section">
-            <p>
-<span style="font-weight: bold; font-style: italic;">Would you still love me if I were a murderer…?</span> 
- <br><br>
-Morello is a nobody: a homeless orphan and starving artist with nothing but impossible dreams of escaping obscurity. Then Florence appears—dazzling, dangerous, and offering Morello a way out, on one chilling condition: each year, they must hunt and kill one of the art world’s predatory men. In return, Morello will inherit a life of privilege and promise.
- <br><br>
-Together, they transform revenge into twisted performance art, staging each murder with meticulous, theatrical flair. But when Morello falls for Jude, a wealthy art student who offers her a glimpse of a life sans murder, her carefully curated reality begins to unravel—and she’s one lie away from losing everything she’s killed for. With the body count rising and anonymous threats closing in, Morello must finally ask herself: is the cost of vengeance ever truly paid? And after a life shaped by violence and manipulation, will she ever become the artist of her own fate, or remain forever someone else’s muse?
- <br><br>
-Compulsive and deviant, <span style="font-style: italic;">My Violent Muse</span> is a razor-sharp thriller about revenge, exploitation, obsession, and the dangerous bargains we strike for power, survival, and love.
-               <section><img src="logo-small.png" ></section>
-                
-              <span style="font-size: 16px; color:#E2A9F1;"> ON SALE: 6th October, 2026 </span>
-                <br>
-                Grand Central Publishing/Hachette US
-                
-                
-                
-   
-            </p>
-        </section>
-        
-
-    </div>
-      
-<section class="image-links" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
-  <a href="https://www.hachettebookgroup.com/titles/rosie-sycamore/my-violent-muse/9781538779132/" target="_blank">
-    <img src="MVM%20pre%20order.png" width=400>
-  </a>
-  <a href="https://www.goodreads.com/book/show/246137637-my-violent-muse?ref=nav_sb_ss_1_14" target="_blank">
-    <img src="MVM%20goodreads.png" width=400>
-  </a>
-</section>
-    
-    
-        <section class="content-section" style="padding-bottom: 0px;">
-           <img src="praise%20for%20MVM.png" alt="">
-        </section>
-     
-     <section style="text-align: left;" >
-
-<p style="font-size: 16px; color:#E2A9F1;">
-    "Rosie Sycamore has penned a bloody treat in her debut, <span style="font-style: italic;">My Violent Muse</span>. This decadent novel pours out a hallucinatory cocktail of revenge, blood lust, art-world debauchery, eat-the-rich class satire, unhinged women, and romance. Written in prose that's both lush and pointed, <span style="font-style: italic;">My Violent Muse</span> rockets to a gut-punch of an ending that is as satisfying as it is mysterious." <br>
-   <span style="color:white;">– Chelsea G. Summers, author of <span style="font-style: italic;">A Certain Hunger</span></span> 
-</p>
-<p style="font-size: 16px; color:#E2A9F1;">
-    "Decisively written and decadently disturbing, <span style="font-style: italic;">My Violent Muse</span> is the perfect spiritual successor to films like <span style="font-style: italic;">Heathers</span> and <span style="font-style: italic;">Jennifer’s Body</span>. Sycamore skewers the upper class's art obsession with gleeful aplomb. A beautifully bloody ode to lust, murder, and exploitation.” <br>
-    <span style="color:white;"> – Saratoga Schaefer, USA TODAY bestselling author of <span style="font-style: italic;">Trad Wife</span></span> 
-</p>    
-
- <p style="font-size: 16px; color:#E2A9F1;">
-“As lurid and sticky as a Morello cherry, and as sensuously sharp as a pomegranate, this debut assaults the senses with blood, obsession, rage and lust. Rosie Sycamore toys with ideas of morality, money, and art, and pushes them all to their limit. Pert and witty, ambivalent and dreamlike, this novel is sharply written, and peppered with pop culture and film references. It is a gleeful, giddy read, and I loved every moment.” <br>
-<span style="color:white;">—Emma van Straaten, award-winning author of <span style="font-style: italic;">Creep</span></span>
+            .two-column-container .image-section img {
+                width: 100%;
+                height: auto;
+                margin: 0;
+            }
 
 
-<p style="font-size: 16px; color:#E2A9F1;">
-“<span style="font-style: italic;">My Violent Muse</span> is lushly written and delightfully deviant. This is <span style="font-style: italic;">the</span> morally gray novel about muses, art monsters, obsession, and an entire ecosystem of exploitation built upon our need to consume beautiful things. It’s as if Patrick Bateman’s feminist, anti-capitalist sister narrated her own delicious tale of revenge and comeuppance. <span style="font-style: italic;">My Violent Muse</span> brims with erotic touches and blood-splattered vengeance, and it aches with the twisted desires of our darkest impulses, asking: What bargain would you be willing to make for a chance at a different life?” <br>
-<span style="color:white;">―Lacey N. Dunham, author of <span style="font-style: italic;">The Belles</span></span>
+            body::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                background-repeat: repeat-x;
+                background-position: center center;
+                background-size: contain;
+                opacity: 1.0;
+                z-index: -1;
+            }
+
+            @media (max-width: 768px) {
+                body::before {
+                    position: absolute;
+                    height: 120vh;
+                    background-attachment: scroll;
+                    background-repeat: repeat;
+                    background-position: center top;
+                    transform: translateZ(0);
+                    will-change: transform;
+                }
+                .two-column-container {
+                    flex-direction: column;
+                }
+
+                body {
+                    position: relative;
+                    min-height: 100vh;
+                }
+            }
+
+
+                    header {
+            padding: 50px 0 0 0;
+                       // border-bottom: 1px solid #333;
+                        position: relative;
+                        background-color: rgba(0,0,0,0.0);
+                        //border-radius: 5px;
+                    }
+
+                    .site-title {
+                        font-size: 80px;
+                        margin-bottom: 10px;
+                        font-weight: normal;
+                        text-align: center;
+                        font-family: 'Raleway', sans-serif;
+
+                    }
+
+                    header > p {
+                        text-align: center;
+                    }
+
+
+                    main {
+                        padding: 0px 0;
+                    }
+
+                    .page-title {
+                        font-size: 28px;
+                        margin-bottom: 30px;
+                        font-weight: normal;
+                        text-align: center;
+                    }
+
+
+            .content-section {
+                margin: 0 auto 40px auto;
+                background-color: #000000; /*#1a1219; */
+                opacity: 80%;
+                padding: 20px;
+                border-radius: 5px;
+                text-align: center;
+                max-width: 1000px;
+
+            }
+
+                    .section-title {
+                        font-size: 24px;
+                        margin-bottom: 20px;
+                        font-weight: normal;
+                        text-align: center;
+                    }
+
+                    p {
+                        margin-bottom: 20px;
+                        text-align: center;
+                    }
+
+
+            img {
+                display: block;
+                margin: 0 auto 40px auto;
+                max-width: 100%;
+                height: auto;
+            }
 
 
 
-<p style="font-size: 16px; color:#E2A9F1;">
-“Louts, sexists, and creepers never saw it coming! A glorious blow for women's wrongs, you'll be screaming as these unhinged murder mommies take down the scene from the inside. This has it all in a blood-soaked, razor-sharp satire of art world excess... Super fun!” <br>
-    <span style="color:white;"> – Bitter Karella, three-time Hugo Award nominee and author of <span style="font-style: italic;">Moonflow</span></span> 
- </p>
- 
- <p style="font-size: 16px; color:#E2A9F1;">
- “A spine-tingling thriller… Sycamore weaves a dark tale of obsession and manipulation that delivers intoxicating atmosphere and substantial psychological depth. Readers intrigued by the gothic premise will be rewarded.”<br>
-    <span style="color:white;"> – Publishers Weekly</span> 
- </p>
- 
-  <p style="font-size: 16px; color:#E2A9F1;">
- “What if your rich benefactor was your toxic situationship, your savior, your partner in crime, your blackmailer, your fake sister, obsessively codependent but also had an avoidant attachment style?? A great story for bisexuals with mommy *and* daddy issues that want to unpack the ethically dubious balance between eating with the rich in order to eat the rich.“<br>
-    <span style="color:white;"> – Under the Umbrella Bookstore, Salt Lake City, Utah</span> 
- </p>
- 
- 
- 
 
- 
- 
+                    .contact-form {
+                        max-width: 600px;
+                        margin: 0 auto;
+                    }
 
- </p>
- 
- 
+                    .form-group {
+                        margin-bottom: 20px;
+                    }
 
-  
-</section>
-      
-           
-      
-          <div class="two-column-container">
-              
+                    label {
+                        display: block;
+                        margin-bottom: 5px;
+                        text-align: center;
+                    }
 
-       
-        <section class="content-section">
-           <img src="praise%20for%20author.png" alt="">
-            <p>
-            Rosie Sycamore is an Australian author. When not writing or reading, you'll find her following the sun, trying to befriend every animal in sight, or re-watching her favourite films and TV shows. <span style="font-style: italic;">My Violent Muse</span> is her debut novel.
-            </p>
-        </section>
-        
-       <section class="image-section">
-            <img src="authorpic.png" alt="My Violent Muse Artwork">
-        </section>
-        
+                    input, textarea {
+                        width: 100%;
+                        padding: 10px;
+                        border: 1px solid #444;
+                        background-color: #222;
+                        color: white;
+                        font-size: 16px;
+                        font-family: 'Helvetica', sans-serif;
+                    }
 
-    </div>
+                    textarea {
+                        min-height: 150px;
+                    }
 
-     
-        <section><img src="museAnnouncementArtwork.jpg"     width=1000></section>
-		
-		
-		        <section class="content-section" style="padding-bottom: 0px;">
-           <img src="contactsHeading.png" width="50%" alt="">
-        </section>
+                    button {
+                        background-color: white;
+                        color: black;
+                        border: none;
+                        padding: 12px 20px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        transition: background-color 0.3s;
+                        display: block;
+                        margin: 0 auto;
+                    }
+
+                    button:hover {
+                        background-color: #ddd;
+                    }
 
 
-        <section class="content-section">
-           <span style="color:#E2A9F1;">for books: </span>
-           <br>
-           <br>
-            Sophie Cudd
-            <br>
-            The Book Group
-            <br>
-            sophie@thebookgroup.com
-			<br>
-			<br>
-			<span style="color:#E2A9F1;">for publicity:</span>
-			<br>
-			<br>
-			Kitanna Hiromasa (GCP)<br>
-			Kitanna.Hiromasa@hbgusa.com <br>
-			Elana Walters (GCP)<br>
-			Elana.Walters@hbgusa.com<br>
-			<br>
-			<span style="color:#E2A9F1;">for film/TV:</span>
-			<br>
-			<br>
-			Olivia Fanaro &amp; Maialie Fitzpatrick (UTA)
-			
-			
-					<br>
-			<br>
-			<span style="color:#E2A9F1;">contact Rosie directly: </span>
-			
-			<p style="color:#E2A9F1;">
-			
-			<p><b>For blurb requests, </b> please note that Rosie does not blurb books that have used AI in any stage of the writing/publishing process.</p>
-			
-			<p><b>For media requests, </b> please note that Rosie will not agree to any media that uses GenAI and does not give permission to use AI for her likeness in promo or other materials. </p>
-			
-			 </p>
-			
-					
-<form method="POST" id="form">
+                    footer {
+                        padding: 30px 0;
+                        margin: 0 auto 40px auto;
+                        border-top: 1px solid #333;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #aaa;
+                        background-color: rgba(0,0,0,0.8);
+                        border-radius: 5px;
+                        max-width: 1000px;
+                    }
 
-    <input type="hidden" name="access_key" value="d1784375-6370-406a-a4d3-6a550a7e24a5">
-    <input type="hidden" name="subject" value="New Submission from Web3Forms">
-    <input type="checkbox" name="botcheck" id="" style="display: none;">
+                    .social-links {
+                        margin-bottom: 20px;
+                    }
 
-    <!-- Custom Form Data -->
-  <input type="text" name="name" required placeholder="name" style="background-color: #000000">
-  <input type="email" name="email" required placeholder="email" style="background-color: #000000">
-   
-   
-  <select name="select" type="select" style="background-color: #000000;" style="font-family: 'Helvetica', sans-serif;" >
-    <option value="" disabled selected style="font-family: 'Helvetica', sans-serif">reason for contact</option>
-    <option value="event">event</option>
-    <option value="collaboration">collaboration</option>
-    <option value="blurb">blurb request</option>
-	<option value="interview">press/interview request</option>
-	<option value="other">other</option>
-  </select>
+                    .social-links a {
+                        margin: 0 10px;
+                        color: white;
+                        text-decoration: none;
+                    }
 
+                    @media (max-width: 768px) {
+                        .book-list {
+                            grid-template-columns: 1fr;
+                        }
 
-  <textarea name="message" required placeholder="message" style="background-color: #000000"></textarea>
+                        .menu-toggle {
+                            top: 20px;
+                        }
+                    }
 
-    <button type="submit" style="background-color: #440022; color:#ffffff">send</button>
+                                .image-links a {
+                position: relative;
+                display: inline-block;
+                transition: opacity 0.3s ease;
+            }
 
-    <div id="result"></div>
+            .image-links a:hover {
+                opacity: 0.7;
+            }
 
-</form>
-			
-        </section>
-		
-		
-		
+            select {
+              width: 100%;
+              box-sizing: border-box;
+                background-color: #2d2d2d;
+              color: #999999;
+              padding: 8px;
+              border: 1px solid #2c3e50;
+              border-radius: 4px;
+            }
 
+            select option {
+              background-color: #000000;
+              color: #333333;
+            }
 
-    
-    </main>
-    
-    <footer>
-        <div class="social-links">
-            <a href="https://www.instagram.com/sycamorerosie/" target="_blank">Instagram</a>
-            <a href="https://www.goodreads.com/book/show/246137637-my-violent-muse?ref=nav_sb_ss_1_14" target="_blank">Goodreads</a>
-			<a href="https://www.netgalley.com/catalog/book/800719" target="_blank">NetGalley</a>
+            ::selection {
+              background-color: #660033;
+            }
+
+            ::placeholder {
+              color: #999999;
+              opacity: 1;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="title2.png" alt="title" />
+        </header>
+
+        <main>
+          
+            <div class="two-column-container">
+                <section class="image-section">
+                    <img
+                        style="box-shadow: 0 0 12px rgba(38, 89, 56, 0.6)"
+                        src="MVMcoverfigThin.png"
+                        alt="My Violent Muse Artwork"
+                    />
+                </section>
+
+                <section class="content-section">
+                    <span style="font-weight: bold; font-style: italic"
+                        >Would you still love me if I were a murderer…?</span
+                    >
+                    <br /><br />
+                    Morello is a nobody: a homeless orphan and starving artist with nothing but impossible dreams of
+                    escaping obscurity. Then Florence appears—dazzling, dangerous, and offering Morello a way out, on
+                    one chilling condition: each year, they must hunt and kill one of the art world’s predatory men. In
+                    return, Morello will inherit a life of privilege and promise.
+                    <br /><br />
+                    Together, they transform revenge into twisted performance art, staging each murder with meticulous,
+                    theatrical flair. But when Morello falls for Jude, a wealthy art student who offers her a glimpse of
+                    a life sans murder, her carefully curated reality begins to unravel—and she’s one lie away from
+                    losing everything she’s killed for. With the body count rising and anonymous threats closing in,
+                    Morello must finally ask herself: is the cost of vengeance ever truly paid? And after a life shaped
+                    by violence and manipulation, will she ever become the artist of her own fate, or remain forever
+                    someone else’s muse?
+                    <br /><br />
+                    Compulsive and deviant, <span style="font-style: italic">My Violent Muse</span> is a razor-sharp
+                    thriller about revenge, exploitation, obsession, and the dangerous bargains we strike for power,
+                    survival, and love.
+                    <section><img src="logo-small.png" /></section>
+
+                    <span style="font-size: 16px; color: #e2a9f1"> ON SALE: 6th October, 2026 </span>
+                    <br />
+                    Grand Central Publishing/Hachette US
+                </section>
+            </div>
+
+            <section class="image-links" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap">
+                <a
+                    href="https://www.hachettebookgroup.com/titles/rosie-sycamore/my-violent-muse/9781538779132/"
+                    target="_blank"
+                >
+                    <img src="MVM%20pre%20order.png" width="400" />
+                </a>
+                <a
+                    href="https://www.goodreads.com/book/show/246137637-my-violent-muse?ref=nav_sb_ss_1_14"
+                    target="_blank"
+                >
+                    <img src="MVM%20goodreads.png" width="400" />
+                </a>
+            </section>
+
+            <section class="content-section" style="padding-bottom: 0px">
+                <img src="praise%20for%20MVM.png" alt="" />
+            </section>
+
+            <section style="text-align: left">
+                <p style="font-size: 16px; color: #e2a9f1">
+                    "Rosie Sycamore has penned a bloody treat in her debut,
+                    <span style="font-style: italic">My Violent Muse</span>. This decadent novel pours out a
+                    hallucinatory cocktail of revenge, blood lust, art-world debauchery, eat-the-rich class satire,
+                    unhinged women, and romance. Written in prose that's both lush and pointed,
+                    <span style="font-style: italic">My Violent Muse</span> rockets to a gut-punch of an ending that is
+                    as satisfying as it is mysterious." <br />
+                    <span style="color: white"
+                        >– Chelsea G. Summers, author of <span style="font-style: italic">A Certain Hunger</span></span
+                    >
+                </p>
+                <p style="font-size: 16px; color: #e2a9f1">
+                    "Decisively written and decadently disturbing,
+                    <span style="font-style: italic">My Violent Muse</span> is the perfect spiritual successor to films
+                    like <span style="font-style: italic">Heathers</span> and
+                    <span style="font-style: italic">Jennifer’s Body</span>. Sycamore skewers the upper class's art
+                    obsession with gleeful aplomb. A beautifully bloody ode to lust, murder, and exploitation.” <br />
+                    <span style="color: white">
+                        – Saratoga Schaefer, USA TODAY bestselling author of
+                        <span style="font-style: italic">Trad Wife</span></span
+                    >
+                </p>
+
+                <p style="font-size: 16px; color: #e2a9f1">
+                    “As lurid and sticky as a Morello cherry, and as sensuously sharp as a pomegranate, this debut
+                    assaults the senses with blood, obsession, rage and lust. Rosie Sycamore toys with ideas of
+                    morality, money, and art, and pushes them all to their limit. Pert and witty, ambivalent and
+                    dreamlike, this novel is sharply written, and peppered with pop culture and film references. It is a
+                    gleeful, giddy read, and I loved every moment.” <br />
+                    <span style="color: white"
+                        >—Emma van Straaten, award-winning author of <span style="font-style: italic">Creep</span></span
+                    >
+                </p>
+
+                <p style="font-size: 16px; color: #e2a9f1">
+                    “<span style="font-style: italic">My Violent Muse</span> is lushly written and delightfully deviant.
+                    This is <span style="font-style: italic">the</span> morally gray novel about muses, art monsters,
+                    obsession, and an entire ecosystem of exploitation built upon our need to consume beautiful things.
+                    It’s as if Patrick Bateman’s feminist, anti-capitalist sister narrated her own delicious tale of
+                    revenge and comeuppance. <span style="font-style: italic">My Violent Muse</span> brims with erotic
+                    touches and blood-splattered vengeance, and it aches with the twisted desires of our darkest
+                    impulses, asking: What bargain would you be willing to make for a chance at a different life?”
+                    <br />
+                    <span style="color: white"
+                        >―Lacey N. Dunham, author of <span style="font-style: italic">The Belles</span></span
+                    >
+                </p>
+
+                <p style="font-size: 16px; color: #e2a9f1">
+                    “Louts, sexists, and creepers never saw it coming! A glorious blow for women's wrongs, you'll be
+                    screaming as these unhinged murder mommies take down the scene from the inside. This has it all in a
+                    blood-soaked, razor-sharp satire of art world excess... Super fun!” <br />
+                    <span style="color: white">
+                        – Bitter Karella, three-time Hugo Award nominee and author of
+                        <span style="font-style: italic">Moonflow</span></span
+                    >
+                </p>
+
+                <p style="font-size: 16px; color: #e2a9f1">
+                    “A spine-tingling thriller… Sycamore weaves a dark tale of obsession and manipulation that delivers
+                    intoxicating atmosphere and substantial psychological depth. Readers intrigued by the gothic premise
+                    will be rewarded.”<br />
+                    <span style="color: white"> – Publishers Weekly</span>
+                </p>
+				
+				<p style="font-size: 16px; color: #e2a9f1">
+                    “Two women turn murdering bad men into art – until one falls for a wealthy student. Her desire for a better life threatens their schemes in this gripping tale of obsession and revenge.“<br />
+                    <span style="color: white"> – PEOPLE magazine</span>
+                </p>
+
+                <p style="font-size: 16px; color: #e2a9f1">
+                    “What if your rich benefactor was your toxic situationship, your savior, your partner in crime, your
+                    blackmailer, your fake sister, obsessively codependent but also had an avoidant attachment style?? A
+                    great story for bisexuals with mommy *and* daddy issues that want to unpack the ethically dubious
+                    balance between eating with the rich in order to eat the rich.“<br />
+                    <span style="color: white"> – Under the Umbrella Bookstore, Salt Lake City, Utah</span>
+                </p>
+				
+				<p style="font-size: 16px; color: #e2a9f1">
+                    “From shocking beginning to twisted end, Rosie Sycamore's art-world revenge thriller My Violent Muse is a bloody delight.“<br />
+                    <span style="color: white"> – BookPage </span>
+                </p>
+				
+				
+				
+            </section>
+
+            <div class="two-column-container">
+                <section class="content-section">
+                    <img src="praise%20for%20author.png" alt="" />
+                    <p>
+                        Rosie Sycamore is an Australian author. When not writing or reading, you'll find her following
+                        the sun, trying to befriend every animal in sight, or re-watching her favourite films and TV
+                        shows. <span style="font-style: italic">My Violent Muse</span> is her debut novel.
+                    </p>
+                </section>
+
+                <section class="image-section">
+                    <img src="authorpic.png" alt="My Violent Muse Artwork" />
+                </section>
+            </div>
+
+            <section><img src="museAnnouncementArtwork.jpg" width="1000" /></section>
+
+            <section class="content-section" style="padding-bottom: 0px">
+                <img src="contactsHeading.png" width="50%" alt="" />
+            </section>
+
+            <section class="content-section">
+                <span style="color: #e2a9f1">for books: </span>
+                <br />
+                <br />
+                Sophie Cudd
+                <br />
+                The Book Group
+                <br />
+                sophie@thebookgroup.com
+                <br />
+                <br />
+                <span style="color: #e2a9f1">for publicity:</span>
+                <br />
+                <br />
+                Kitanna Hiromasa (GCP)<br />
+                Kitanna.Hiromasa@hbgusa.com <br />
+                Elana Walters (GCP)<br />
+                Elana.Walters@hbgusa.com<br />
+                <br />
+                <span style="color: #e2a9f1">for film/TV:</span>
+                <br />
+                <br />
+                Olivia Fanaro &amp; Maialie Fitzpatrick (UTA)
+
+                <br />
+                <br />
+                <span style="color: #e2a9f1">contact Rosie directly: </span>
+
+                <span style="color: #e2a9f1">
+                    <p>
+                        <b>For blurb requests, </b> please note that Rosie does not blurb books that have used AI in any
+                        stage of the writing/publishing process.
+                    </p>
+
+                    <p>
+                        <b>For media requests, </b> please note that Rosie will not agree to any media that uses GenAI
+                        and does not give permission to use AI for her likeness in promo or other materials.
+                    </p>
+
+                     </span
+                >
+
+                <form method="POST" id="form">
+                    <input type="hidden" name="access_key" value="d1784375-6370-406a-a4d3-6a550a7e24a5" />
+                    <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+                    <input type="checkbox" name="botcheck" id="" style="display: none" />
+
+                    <input type="text" name="name" required placeholder="name" style="background-color: #000000" />
+                    <input type="email" name="email" required placeholder="email" style="background-color: #000000" />
+
+                    <select
+                        name="select"
+                        type="select"
+                        style="background-color: #000000"
+                        style="font-family: &quot;Helvetica&quot;, sans-serif"
+                    >
+                        <option value="" disabled selected style="font-family: &quot;Helvetica&quot;, sans-serif">
+                            reason for contact
+                        </option>
+                        <option value="event">event</option>
+                        <option value="collaboration">collaboration</option>
+                        <option value="blurb">blurb request</option>
+                        <option value="interview">press/interview request</option>
+                        <option value="other">other</option>
+                    </select>
+
+                    <textarea
+                        name="message"
+                        required
+                        placeholder="message"
+                        style="background-color: #000000"
+                    ></textarea>
+
+                    <button type="submit" style="background-color: #440022; color: #ffffff">send</button>
+
+                    <div id="result"></div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="social-links">
+                <a href="https://www.instagram.com/sycamorerosie/" target="_blank">Instagram</a>
+                <a
+                    href="https://www.goodreads.com/book/show/246137637-my-violent-muse?ref=nav_sb_ss_1_14"
+                    target="_blank"
+                    >Goodreads</a
+                >
+                <a href="https://www.netgalley.com/catalog/book/800719" target="_blank">NetGalley</a>
+            </div>
+            <p>&copy; 2026 rosie sycamore. All rights reserved.</p>
+        </footer>
+
+        <div align="center" style="display: none">
+            <a href="https://www.counter12.com"
+                ><img src="https://www.counter12.com/img-4yD15Wy1c6DZ86CZ-3.gif" border="0" alt="counter"
+            /></a>
+            <script type="text/javascript" src="https://www.counter12.com/ad.js?id=4yD15Wy1c6DZ86CZ"></script>
         </div>
-        <p>&copy; 2026 rosie sycamore. All rights reserved.</p>
-    </footer>
-	
-	
-	
-	<div align=center style="display:none;"><a href='https://www.counter12.com'><img src='https://www.counter12.com/img-4yD15Wy1c6DZ86CZ-3.gif' border='0' alt='counter'></a><script type='text/javascript' src='https://www.counter12.com/ad.js?id=4yD15Wy1c6DZ86CZ'></script></div>
-	
-	
-	
-	<script>
-	const form = document.getElementById('form');
-const result = document.getElementById('result');
 
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const formData = new FormData(form);
-  const object = Object.fromEntries(formData);
-  const json = JSON.stringify(object);
-  result.innerHTML = "Please wait..."
+        <script>
+            const form = document.getElementById("form");
+            const result = document.getElementById("result");
 
-    fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: json
-        })
-        .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-                result.innerHTML = json.message;
-            } else {
-                console.log(response);
-                result.innerHTML = json.message;
-            }
-        })
-        .catch(error => {
-            console.log(error);
-            result.innerHTML = "Something went wrong!";
-        })
-        .then(function() {
-            form.reset();
-            setTimeout(() => {
-                result.style.display = "none";
-            }, 3000);
-        });
-});
-	</script>
-	
-	
-	
-</body>
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+                result.innerHTML = "Please wait...";
+
+                fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json",
+                    },
+                    body: json,
+                })
+                    .then(async (response) => {
+                        let json = await response.json();
+                        if (response.status == 200) {
+                            result.innerHTML = json.message;
+                        } else {
+                            console.log(response);
+                            result.innerHTML = json.message;
+                        }
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                        result.innerHTML = "Something went wrong!";
+                    })
+                    .then(function () {
+                        form.reset();
+                        setTimeout(() => {
+                            result.style.display = "none";
+                        }, 3000);
+                    });
+            });
+        </script>
+    </body>
 </html>
