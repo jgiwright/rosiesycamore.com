@@ -480,7 +480,7 @@
                 </section>
 
                 <section class="image-section">
-                    <img src="authorpic.png" alt="My Violent Muse Artwork" />
+                    <img src="authorpic2.png" alt="My Violent Muse Artwork" />
                 </section>
             </div>
 			
@@ -551,57 +551,7 @@
 
                 <br />
                 <br />
-				<!--  
-                <span style="color: #e2a9f1">contact Rosie directly: </span>
 
-              <span>
-                    <p>
-                        <b>For blurb requests, </b> please note that Rosie does not blurb books that have used AI in any
-                        stage of the writing/publishing process.
-                    </p>
-
-                    <p>
-                        <b>For media requests, </b> please note that Rosie will not agree to any media that uses GenAI
-                        and does not give permission to use AI for her likeness in promo or other materials.
-                    </p>
-
-                     </span> -->
-
-              <!--  <form method="POST" id="form">
-                    <input type="hidden" name="access_key" value="d1784375-6370-406a-a4d3-6a550a7e24a5" />
-                    <input type="hidden" name="subject" value="New Submission from Web3Forms" />
-                    <input type="checkbox" name="botcheck" id="" style="display: none" />
-
-                    <input type="text" name="name" required placeholder="name" style="background-color: #000000" />
-                    <input type="email" name="email" required placeholder="email" style="background-color: #000000" />
-
-                    <select
-                        name="select"
-                        type="select"
-                        style="background-color: #000000"
-                        style="font-family: &quot;Helvetica&quot;, sans-serif"
-                    >
-                        <option value="" disabled selected style="font-family: &quot;Helvetica&quot;, sans-serif">
-                            reason for contact
-                        </option>
-                        <option value="event">event</option>
-                        <option value="collaboration">collaboration</option>
-                        <option value="blurb">blurb request</option>
-                        <option value="interview">press/interview request</option>
-                        <option value="other">other</option>
-                    </select>
-
-                    <textarea
-                        name="message"
-                        required
-                        placeholder="message"
-                        style="background-color: #000000"
-                    ></textarea>
-
-                    <button type="submit" style="background-color: #440022; color: #ffffff">send</button>
-
-                    <div id="result"></div>
-                </form> -->
             </section>
         </main>
 
@@ -625,45 +575,6 @@
             <script type="text/javascript" src="https://www.counter12.com/ad.js?id=4yD15Wy1c6DZ86CZ"></script>
         </div>
 
-     <!--   <script>
-            const form = document.getElementById("form");
-            const result = document.getElementById("result");
 
-            form.addEventListener("submit", function (e) {
-                e.preventDefault();
-                const formData = new FormData(form);
-                const object = Object.fromEntries(formData);
-                const json = JSON.stringify(object);
-                result.innerHTML = "Please wait...";
-
-                fetch("https://api.web3forms.com/submit", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        Accept: "application/json",
-                    },
-                    body: json,
-                })
-                    .then(async (response) => {
-                        let json = await response.json();
-                        if (response.status == 200) {
-                            result.innerHTML = json.message;
-                        } else {
-                            console.log(response);
-                            result.innerHTML = json.message;
-                        }
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                        result.innerHTML = "Something went wrong!";
-                    })
-                    .then(function () {
-                        form.reset();
-                        setTimeout(() => {
-                            result.style.display = "none";
-                        }, 3000);
-                    });
-            });
-        </script> -->
     </body>
 </html>
